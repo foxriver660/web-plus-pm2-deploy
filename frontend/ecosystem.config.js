@@ -14,7 +14,7 @@ module.exports = {
       repo: "https://github.com/foxriver660/web-plus-pm2-deploy.git",
       path: "/home/foxriver/frontend",
       "post-deploy":
-        "cd /home/foxriver/frontend/source/frontend/ && npm i && npm run build",
+        "cd /home/foxriver/frontend/source/frontend/ && echo 'test' && npm i && npm run build",
     },
   },
 };
