@@ -8,7 +8,7 @@
     "start": "ts-node src/app.ts",
     "dev": "ts-node-dev src/app.ts",
     "lint": "npx eslint src/**/*.ts",
-    "lint-fix": "npx eslint src/**/*.ts --fix"
+    "lint-fix": "npx eslint src/**/*.{js,ts,config.js} --fix"
   },
   "author": "Yandex.Praktikum",
   "license": "ISC",
