@@ -13,8 +13,7 @@ module.exports = {
       ref: "origin/master",
       repo: "https://github.com/foxriver660/web-plus-pm2-deploy.git",
       path: "/home/foxriver/frontend",
-      "post-deploy":
-        "cd /home/foxriver/frontend/source/frontend/ && echo 'test' && npm i && npm run build",
+      "post-deploy": `cd /home/foxriver/frontend/source/frontend/ && echo 'test' && /home/foxriver/.nvm/versions/node/v18.17.0/bin/npm i && npm run build`,
     },
   },
 };
