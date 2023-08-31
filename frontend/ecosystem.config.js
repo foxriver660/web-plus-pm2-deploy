@@ -1,11 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: "mesto-frontend",
+      name: "app1",
+      script: "./app.js",
     },
   ],
-
-  // Deployment Configuration
   deploy: {
     production: {
       user: "foxriver",
