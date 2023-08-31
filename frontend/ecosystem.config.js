@@ -1,3 +1,8 @@
+require("dotenv").config({ path: ".env.deploy" });
+
+const { DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF, DEPLOY_REPO } =
+  process.env;
+
 module.exports = {
   apps: [
     {
@@ -6,12 +11,12 @@ module.exports = {
   ],
   deploy: {
     production: {
-      user: "foxriver",
-      host: "158.160.59.209",
-      ref: "origin/master",
-      repo: "https://github.com/foxriver660/web-plus-pm2-deploy.git",
-      path: "/home/foxriver/mesto-frontend",
-      "post-deploy": `cd /home/foxriver/mesto-frontend/source/frontend/ && pwd && npm i`,
+      user: DEPLOY_USER,
+      host: DEPLOY_HOST,
+      ref: DEPLOY_REF,
+      repo: DEPLOY_REPO,
+      path: DEPLOY_PATH,
+      "post-deploy": `cd /home/foxriver/mesto-frontend/source/frontend/ && npm i && npm run build`,
     },
   },
 };
